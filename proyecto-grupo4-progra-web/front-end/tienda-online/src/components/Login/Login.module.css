@@ -1,0 +1,11 @@
+.Login {}
+
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #080000;
+    border-radius: 1em;
+    background-color: #fcfcfd;
+    color: rgb(10, 0, 0);
+}

@@ -1,0 +1,102 @@
+/* Estilos para el contenedor principal */
+.Home {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+  }
+  
+  /* Estilos para el encabezado */
+  .header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilos para el logotipo en el encabezado */
+  .header-logo h1 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  /* Estilos para la barra de navegación en el encabezado */
+  .header-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .header-nav ul li {
+    margin-right: 20px;
+  }
+  
+  /* Estilos para el contenido principal */
+  .main-content {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Estilos para la lista de productos */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+  }
+  
+  /* Estilos para el contenedor de elementos de productos */
+  .product-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Estilos para cada elemento de producto */
+  .product-item {
+    width: 250px; 
+    margin: 10px; 
+  }
+
+  .product-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-item h3 {
+    margin: 10px 0;
+  }
+  
+  .product-item p {
+    margin: 5px 0;
+  }
+  
+  /* Estilos para el pie de página */
+  .footer {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f0f0f0;
+  }
+  
+  /* Estilos para el contenido del pie de página */
+  .footer-content {
+    text-align: center;
+  }
+  
+  .footer-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-content ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-content ul li:last-child {
+    margin-right: 0;
+  }
