@@ -5,37 +5,39 @@ import { Link } from 'react-router-dom';
 
 const Home = ({ addToCart }) => (
   <div className={styles.Home} data-testid="Home">
-    
+    <header className={styles.header}>
+      <h1 className={styles['header-logo']}>TrendNet</h1>
+      <nav className={styles['header-nav']}>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/cart">Cart</Link></li>
+        </ul>
+      </nav>
+    </header>
     <main className={styles['main-content']}>
-      <section className={styles['product-list']}>
-        <h2>Artículos</h2>
-        <div className={styles['product-items-container']}>
-          {products.map((product) => (
-            <div className={styles['product-item']} key={product.id}>
-              <img src={product.image} alt={product.name} />
-              <div className={styles['product-details']}>
-                <h3>{product.name}</h3>
-                <p>Precio: {product.price}</p>
-                <button>
-                  <Link to={`/product/${product.id}`}>Ver detalles</Link>
-                </button>
-                <button onClick={() => addToCart(product)}>Agregar al carrito</button>
+      <h2>Artículos</h2>
+      <div className={styles['product-list']}>
+        {products.map((product) => (
+          <div className={styles['product-item']} key={product.id}>
+            <img src={product.image} alt={product.name} />
+            <div className={styles['product-details']}>
+              <h3>{product.name}</h3>
+              <p>Precio: ${product.price.toFixed(2)}</p>
+              <div className={styles['product-buttons']}>
+                <Link to={`/product/${product.id}`} className={styles['details-button']}>Ver detalles</Link>
+                <button onClick={() => addToCart(product)} className={styles['add-to-cart-button']}>Agregar al carrito</button>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        ))}
+      </div>
     </main>
     <footer className={styles.footer}>
       <div className={styles['footer-content']}>
-        <p>&copy; 2024 TrendNet. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} TrendNet. Todos los derechos reservados.</p>
         <ul>
-          <li>
-            <a href="#">Política de privacidad</a>
-          </li>
-          <li>
-            <a href="#">Términos y condiciones</a>
-          </li>
+          <li><a href="#">Política de privacidad</a></li>
+          <li><a href="#">Términos y condiciones</a></li>
         </ul>
       </div>
     </footer>
